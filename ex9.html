@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function</h1>
+    <h2>Basic</h2>
+    <ul>
+    <script>
+            function two(){
+            document.write('<li>2-1</li>');
+            document.write('<li>2-2</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+    </script>
+    <h2>Parameter & Argument</h2>
+    <script>
+            function plus(){
+                document.write(1 + 1 + '<br>');    
+            }
+            plus();
+            // () 안을 매개변수(parameter)라 한다.
+            function sum(left, right){
+                document.write(left + right + '<br>');
+            }
+            // 괄호 안에 있는 값은 인자(argument) 라 한다.
+            sum(2, 3);
+            sum(3, 4);
+    </script>
+    <h2>Return</h2>
+    <script>
+        function sum2(left, right){
+            // sum의 결과를 리턴
+            return left + right;
+        }
+        document.write(sum2(2, 3)+'<br>');
+        document.write('<div style="color:coral">'+sum2(2, 3)+'</div>');
+        document.write('<div style="font-size:3rem">'+sum2(4, 7)+'</div>');
+    </script>
+</body>
+</html>

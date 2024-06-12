@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+    <script>
+        // 정보의 양이 많아졌을 때 정리하는 도구가 배열(순서에 따라 정리)
+        // 객체는 중괄호로 표현 배열은 대괄호로 표현
+        var names = {
+            "my" : "kukyohyun",
+            "dog" : "toto"
+        };
+        // 정보를 꺼내올 때 이런식으로 사용
+        document.write("my : " +names.my+"<br>");
+        document.write("dog : "+names.dog+"<br>");
+        names.family = "ku's";
+        document.write("famliy : "+names.family+"<br>");
+        // 띄어쓰기가 필요한 경우 .을 뗴고 대괄호를 이용한다.
+        names["high school"] = "baekseok";
+        document.write("high school : "+names["high school"]+"<br>");
+    </script>
+    <h2>Iterate</h2>
+    <script>
+        //for를 쓰면 변수가 가르키는 객체에 있는 키 값들을 가져오는 반복문
+        // 키는 my, dog 가 키
+        for(var key in names){
+            document.write(key+'<br>');
+            // 모든 데이터를 순회하면서 내가 원하는 데이터가 있는지 확인 할 수 있다.
+            document.write(key+ ' : '+names[key]+'<br>');
+        }
+    </script>
+    <h2>Property & Method</h2>
+    <script>
+        names.showAll = function(){
+            for(var key in names){
+                //객체의 이름이 바뀌어도 this를 사용하면 해결된다.
+            document.write(key+ ' : '+this[key]+'<br>');
+        }
+    }
+    names.showAll();
+    </script>
+</body>
+</html>
